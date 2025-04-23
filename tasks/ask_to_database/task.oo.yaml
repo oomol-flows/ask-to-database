@@ -1,0 +1,44 @@
+executor:
+  name: python
+  options:
+    entry: __init__.py
+inputs_def:
+  - handle: training_data_path
+    json_schema:
+      type: string
+      ui:widget: dir
+  - handle: n_result_ddl
+    json_schema:
+      type: integer
+    value: 10
+    nullable: true
+  - handle: mysql
+    json_schema:
+      type: object
+      additionalProperties: false
+      properties:
+        host:
+          type: string
+        database:
+          type: string
+        user:
+          type: string
+        password:
+          contentMediaType: oomol/secret
+          type: string
+        port:
+          type: number
+  - handle: question
+    json_schema:
+      type: string
+      ui:widget: text
+outputs_def:
+  - handle: sql
+    json_schema:
+      type: string
+  - handle: result
+    json_schema:
+      type: string
+title: Ask to database
+icon: ":twemoji:left-speech-bubble:"
+description: n_result_ddl： 用于设定提问时在训练数据中搜索的相关内容的条数，数字越大生成的提问的结果越准确，但是消耗 token 会越多

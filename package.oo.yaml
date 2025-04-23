@@ -1,0 +1,16 @@
+version: 0.0.1
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: pip install pandas
+  bootstrap: |
+    npm install
+    pip install -r requirements.txt
+icon: ./icon.png
+dependencies:
+  {}
+name: ask-to-database
+description: |-
+  
+  Querying the database via natural language
+displayName: Ask To Database
+repository: https://github.com/oomol-flows/ask-to-database

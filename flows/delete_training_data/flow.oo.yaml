@@ -1,0 +1,9 @@
+nodes:
+  - task: self::delete_training_data
+    title: "Delete training data #1"
+    node_id: delete_training_data#1
+    inputs_from:
+      - handle: training_data_path
+      - handle: training_data_id
+    description: 按照训练记录 id 来删除训练的记录
+title: Delete training data

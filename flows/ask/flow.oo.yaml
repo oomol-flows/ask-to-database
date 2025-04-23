@@ -1,0 +1,56 @@
+nodes:
+  - task: self::ask_to_database
+    title: "Ask to database #1"
+    node_id: ask_to_database#1
+    inputs_from:
+      - handle: training_data_path
+      - handle: question
+      - handle: mysql
+      - handle: n_result_ddl
+        value: 10
+    description: n_result_ddl： 用于设定提问时在训练数据中搜索的相关内容的条数，数字越大生成的提问的结果越准确，但是消耗 token 会越多
+  - task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            type: string
+      outputs_def:
+        []
+      executor:
+        name: python
+        options:
+          entry: scriptlets/+python#1.py
+    title: Preview sql
+    icon: ":logos:python:"
+    node_id: +python#1
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: ask_to_database#1
+            output_handle: sql
+  - task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            type: string
+      outputs_def:
+        []
+      executor:
+        name: python
+        options:
+          entry: scriptlets/+python#2.py
+    title: Preview result
+    node_id: +python#2
+    icon: ":logos:python:"
+    inputs_from:
+      - handle: input
+        from_node:
+          - node_id: ask_to_database#1
+            output_handle: result
+title: Ask

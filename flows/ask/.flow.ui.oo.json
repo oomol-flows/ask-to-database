@@ -1,0 +1,58 @@
+{
+  "nodes": {
+    "ask_to_database#1": {
+      "contentWidth": 698.246899301351,
+      "rfNode": {
+        "position": {
+          "x": 185.01254693702055,
+          "y": 76.88414169526474
+        }
+      },
+      "sections": {
+        "inputs": {
+          "collapsed": {
+            "question": {
+              "[]": false
+            },
+            "mysql": {
+              "[]": false
+            }
+          },
+          "height": {
+            "question": {
+              "[]": 24
+            }
+          }
+        }
+      }
+    },
+    "+python#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 1030.6916837119468,
+          "y": 76.88414169526474
+        }
+      },
+      "sections": {
+        "scriptlet": {
+          "cardCollapsed": true
+        }
+      }
+    },
+    "+python#2": {
+      "contentWidth": 710.7754026844209,
+      "rfNode": {
+        "position": {
+          "x": 1030.6916837119468,
+          "y": 615.7273221518735
+        }
+      },
+      "sections": {
+        "scriptlet": {
+          "cardCollapsed": true
+        }
+      }
+    }
+  }
+}

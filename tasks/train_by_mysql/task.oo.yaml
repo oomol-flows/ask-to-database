@@ -1,0 +1,37 @@
+executor:
+  name: python
+  options:
+    entry: __init__.py
+inputs_def:
+  - handle: training_data_path
+    json_schema:
+      type: string
+      ui:widget: dir
+  - handle: mysql
+    json_schema:
+      type: object
+      additionalProperties: false
+      properties:
+        host:
+          type: string
+        database:
+          type: string
+        user:
+          type: string
+        password:
+          contentMediaType: oomol/secret
+          type: string
+        port:
+          type: number
+  - handle: db_description
+    json_schema:
+      type: string
+      ui:widget: text
+    value: ""
+    nullable: false
+outputs_def:
+  - handle: training_record
+    json_schema:
+      type: string
+title: Train by MySQL
+icon: ":twemoji:man-teacher:"

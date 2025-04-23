@@ -1,0 +1,16 @@
+executor:
+  name: python
+  options:
+    entry: __init__.py
+inputs_def:
+  - handle: training_data_path
+    json_schema:
+      type: string
+      ui:widget: dir
+  - handle: training_data_id
+    json_schema:
+      type: string
+outputs_def:
+  []
+icon: ":fa6-solid:delete-left:"
+title: Delete training data

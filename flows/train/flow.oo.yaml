@@ -1,0 +1,9 @@
+nodes:
+  - task: self::train_by_mysql
+    title: "Train by MySQL #1"
+    node_id: train_by_mysql#1
+    inputs_from:
+      - handle: training_data_path
+      - handle: db_description
+      - handle: mysql
+title: Train
