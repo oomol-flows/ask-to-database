@@ -1,12 +1,12 @@
 #region generated meta
 import typing
+from oocana import Context
 class Inputs(typing.TypedDict):
     training_data_path: str
     training_data_id: str
 Outputs = typing.Dict[str, typing.Any]
 #endregion
 
-from oocana import Context
 from vanna.openai import OpenAI_Chat
 from vanna.chromadb import ChromaDB_VectorStore
 

@@ -1,5 +1,6 @@
 #region generated meta
 import typing
+from oocana import Context
 class Inputs(typing.TypedDict):
     training_data_path: str
     mysql: dict
@@ -9,7 +10,6 @@ class Outputs(typing.TypedDict):
 #endregion
 
 import openai
-from oocana import Context
 from vanna.openai import OpenAI_Chat
 from vanna.chromadb import ChromaDB_VectorStore
 

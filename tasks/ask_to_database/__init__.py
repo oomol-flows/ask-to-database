@@ -1,5 +1,6 @@
 #region generated meta
 import typing
+from oocana import Context
 class Inputs(typing.TypedDict):
     training_data_path: str
     n_result_ddl: int | None
@@ -10,7 +11,6 @@ class Outputs(typing.TypedDict):
     result: str
 #endregion
 
-from oocana import Context
 import openai
 from vanna.openai import OpenAI_Chat
 from vanna.chromadb import ChromaDB_VectorStore
