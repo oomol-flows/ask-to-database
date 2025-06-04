@@ -1,4 +1,4 @@
-version: 0.1.0
+version: 0.1.1
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -14,4 +14,4 @@ description: |-
   Querying the database via natural language
 displayName: Ask To Database
 repository: https://github.com/oomol-flows/ask-to-database
-releaseNotes: "refactor: use poetry to lock lib versions"
+releaseNotes: "fix: add chromadb in lock file"
