@@ -33,11 +33,6 @@
           "x": 1030.6916837119468,
           "y": 76.88414169526474
         }
-      },
-      "sections": {
-        "scriptlet": {
-          "cardCollapsed": true
-        }
       }
     },
     "+python#2": {
@@ -46,11 +41,6 @@
         "position": {
           "x": 1030.6916837119468,
           "y": 615.7273221518735
-        }
-      },
-      "sections": {
-        "scriptlet": {
-          "cardCollapsed": true
         }
       }
     }

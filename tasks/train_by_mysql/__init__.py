@@ -1,6 +1,10 @@
+from oocana import Context
+import openai
+from vanna.openai import OpenAI_Chat
+from vanna.chromadb import ChromaDB_VectorStore
+
 #region generated meta
 import typing
-from oocana import Context
 class Inputs(typing.TypedDict):
     training_data_path: str
     mysql: dict
@@ -8,10 +12,6 @@ class Inputs(typing.TypedDict):
 class Outputs(typing.TypedDict):
     training_record: str
 #endregion
-
-import openai
-from vanna.openai import OpenAI_Chat
-from vanna.chromadb import ChromaDB_VectorStore
 
 class MyVanna(ChromaDB_VectorStore, OpenAI_Chat):
     def __init__(self, ai_client, config=None):

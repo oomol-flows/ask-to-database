@@ -1,6 +1,7 @@
+from oocana import Context
+
 #region generated meta
 import typing
-from oocana import Context
 class Inputs(typing.TypedDict):
     input: str
 Outputs = typing.Dict[str, typing.Any]
